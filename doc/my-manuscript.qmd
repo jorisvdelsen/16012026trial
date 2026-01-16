@@ -54,10 +54,34 @@ head(mice::boys)
 ```
 
 ```{r}
-#| file: "scripts/read_data.R"
+#| file: "../scripts/read_data.R"
 #| eval: true
 ```
 
 ```{r}
 head(boys)
 ```
+
+## Creatieve toevoeging van Merijn
+
+Hoi! Dit is spannend. Vanaf nu ga ik je lastig vallen ;)
+
+```{r}
+library(ggplot2)
+
+df <- data.frame(
+x = seq(0, 10, length.out = 100)
+)
+
+df$y <- sin(df$x)
+
+ggplot(df, aes(x = x, y = y)) +
+geom_line() +
+labs(
+title = "Sinusfunctie",
+x = "x",
+y = "sin(x)"
+) +
+theme_minimal()
+```
+
